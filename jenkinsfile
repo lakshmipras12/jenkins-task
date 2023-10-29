@@ -15,5 +15,13 @@ pipeline {
         }
 
     }
+    post {
+        success {
+            emailext subject: 'deployed successfully',
+            body: 'jenkins task executed successfully',
+            to: 'menthemklpn61@gmail.com',
+            attachLog: true
+        }
+    }
 
 }
