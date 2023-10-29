@@ -16,12 +16,10 @@ pipeline {
 
     }
     post {
-        success {
-            emailext subject: 'deployed successfully',
-            body: 'jenkins task executed successfully',
-            to: 'menthemklpn61@gmail.com',
-            attachLog: true
+        always{
+            mail to: "menthemklpn61@gmail.com",
+            subject: "jenkins output",
+            body: "output of jenkins task"
         }
     }
-
 }
