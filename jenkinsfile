@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('git clone') {
+            steps {
+                git branch: 'master',
+                url: 'https://github.com/lakshmipras12/jenkins-task.git'
+            }
+        }
+
+        stage ('build') {
+            steps {
+                sh 'cat jenkinsfile.sh'
+            }
+        }
+
+    }
+
+}
