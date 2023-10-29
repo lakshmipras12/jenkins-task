@@ -10,7 +10,7 @@ pipeline {
 
         stage ('build') {
             steps {
-                sh 'cat jenkinsfile.sh'
+                sh 'cat jenkinfile.sh'
             }
         }
 
